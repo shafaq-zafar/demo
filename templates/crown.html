@@ -1,0 +1,663 @@
+{% extends "base.html" %}
+{% block content %}
+
+<title>Crowns and abridgework at Lab-Hira Dental Lab</title>
+<style>
+  body {
+    font-size: 1rem;
+    font-family: 'Roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+  /* horizontal line */
+  .progress {
+    width: 45%;
+    margin-left: 28%;
+  }
+  .line{
+    width: 100%;
+    margin-right: 150%;
+  }
+  .card-title:hover {
+    color: #007DC6;
+    cursor: pointer;
+  }
+
+/* WhatsApp chat Widget styling */
+.whatsapp-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.whatsapp-widget:hover {
+  background-color: #128C7E;
+}
+
+.whatsapp-widget .whatsapp-icon {
+ display: block;
+ width: 40px;
+ height: 40px;
+}
+
+/* Hide the widget initially */
+.whatsapp-chat-box {
+ display: none;
+ position: fixed;
+ bottom: 20px;
+ right: 80px;
+ background-color: #ffffff;
+ border: 1px solid #e1e1e1;
+ border-radius: 8px;
+ box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+ z-index: 998;
+}
+
+.whatsapp-chat-box iframe {
+ width: 100%;
+ height: 100%;
+ border: 0;
+}
+</style>
+<body>
+
+      <!-- Whatsapp Chat Widget -->
+      <div class="whatsapp-widget" id="whatsapp-widget">
+        <a href="https://wa.me/+442476263962" target="_blank" rel="noopener noreferrer">
+            <div class="whatsapp-icon">
+                <svg>
+                    <path d="M12.9821 10.1115C12.7029 10.7767 11.5862 11.442 10.7486 11.575C10.1902 11.7081 9.35269 11.8411 6.84003 10.7767C3.48981 9.44628 1.39593 6.25317 1.25634 6.12012C1.11674 5.85403 2.13001e-06 4.39053 2.13001e-06 2.92702C2.13001e-06 1.46351 0.83755 0.665231 1.11673 0.399139C1.39592 0.133046 1.8147 1.01506e-06 2.23348 1.01506e-06C2.37307 1.01506e-06 2.51267 1.01506e-06 2.65226 1.01506e-06C2.93144 1.01506e-06 3.21063 -2.02219e-06 3.35022 0.532183C3.62941 1.19741 4.32736 2.66092 4.32736 2.79397C4.46696 2.92702 4.46696 3.19311 4.32736 3.32616C4.18777 3.59225 4.18777 3.59224 3.90858 3.85834C3.76899 3.99138 3.6294 4.12443 3.48981 4.39052C3.35022 4.52357 3.21063 4.78966 3.35022 5.05576C3.48981 5.32185 4.18777 6.38622 5.16491 7.18449C6.42125 8.24886 7.39839 8.51496 7.81717 8.78105C8.09636 8.91409 8.37554 8.9141 8.65472 8.648C8.93391 8.38191 9.21309 7.98277 9.49228 7.58363C9.77146 7.31754 10.0507 7.1845 10.3298 7.31754C10.609 7.45059 12.2841 8.11582 12.5633 8.38191C12.8425 8.51496 13.1217 8.648 13.1217 8.78105C13.1217 8.78105 13.1217 9.44628 12.9821 10.1115Z" transform="translate(12.9597 12.9597)" fill="#FAFAFA"></path>
+    
+                    <path d="M0.196998 23.295L0.131434 23.4862L0.323216 23.4223L5.52771 21.6875C7.4273 22.8471 9.47325 23.4274 11.6637 23.4274C18.134 23.4274 23.4274 18.134 23.4274 11.6637C23.4274 5.19344 18.134 -0.1 11.6637 -0.1C5.19344 -0.1 -0.1 5.19344 -0.1 11.6637C-0.1 13.9996 0.624492 16.3352 1.93021 18.2398L0.196998 23.295ZM5.87658 19.8847L5.84025 19.8665L5.80154 19.8788L2.78138 20.8398L3.73978 17.9646L3.75932 17.906L3.71562 17.8623L3.43104 17.5777C2.27704 15.8437 1.55796 13.8245 1.55796 11.6637C1.55796 6.03288 6.03288 1.55796 11.6637 1.55796C17.2945 1.55796 21.7695 6.03288 21.7695 11.6637C21.7695 17.2945 17.2945 21.7695 11.6637 21.7695C9.64222 21.7695 7.76778 21.1921 6.18227 20.039L6.17557 20.0342L6.16817 20.0305L5.87658 19.8847Z" transform="translate(7.7758 7.77582)" fill="white" stroke="white" stroke-width="0.2"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
+    
+    <script>
+        function openWhatsApp() {
+            // Replace YOUR_PHONE_NUMBER with your actual WhatsApp number
+            var phoneNumber = '+442476263962';  // Use the international format without spaces or special characters
+            
+            // Create a WhatsApp link
+            var whatsappLink = 'https://wa.me/+442476263962' + phoneNumber;
+            
+            // Open the link in a new tab or window
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+
+
+<section class="elementor-section elementor-top-section elementor-element ...">
+  <!-- First Content Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+          <div class="eael-dual-header text-center">
+              <h1 class="title">
+                  <span style="color: #007DC6;"><strong>CROWNS &</strong></span>
+                  <span style="color: #54595F;"><strong>BRIDGES</strong></span>
+              </h1>
+              <div class="eael-dch-separator-wrap">
+                  <span class="separator-one"></span>
+                  <span class="separator-two"></span>
+              </div>
+          </div>
+          <!-- horizontal line -->
+          <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50" style="height: 6px; background-color: #54595F;">
+              <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+          </div>
+      </div>
+  </div>
+</div>   
+  </div>
+</section>
+
+<section class="elementor-section elementor-top-section elementor-element ...">
+  <!-- Second Content Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+          <div class="elementor-element elementor-element-3b44c026 elementor-widget elementor-widget-text-editor">
+              <div class="elementor-widget-container">
+                  <div class="eael-dual-header">
+                      <h2 class="title">
+                          <br>
+                          <br>
+                          <span style="color: #007DC6;"><strong>FINEST CROWNS AND BRIDGES</strong></span>
+                          <span style="color: #54595F;"><strong>FOR ALL DENTISTS ACROSS UK</strong></span>
+                      </h2>
+                      <div class="eael-dch-separator-wrap">
+                          <span class="separator-one"></span>
+                          <span class="separator-two"></span>
+                      </div>
+<!-- horizontal line -->
+                      <div class="line">
+                      <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50" style="height: 6px; background-color: #54595F;">
+                          <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <br>
+                  <p>Hira Dental Lab is one of the most trusted service providers in the UK. Our lab is able to provide highest quality crowns and bridges for your patient’s requirement. We design, manufacture and provide finest industry leading crowns and bridges for dentist requirements. So, treat your patients right with accurate and durable crowns or bridges. Fix their teeth and place materials you’ll be proud of. We recognize the growing need for high-quality selective materials for crown and bridgework. Our technicians are able to design very accurate crowns and bridges from the very best of materials with digital dentistry techniques. Send us your patient’s requirement and we will deliver 100% on it. We are the trusted dental laboratory in UK offering custom solutions for your patients.</p>
+                  
+              </div>
+          </div>
+      </div>
+<!-- image -->
+      <div class="col-md-6">
+          <div class="elementor-element elementor-element-124c7253 elementor-widget elementor-widget-image">
+              <div class="elementor-widget-container">
+                  <br>
+                  <br>
+                  <img fetchpriority="high" decoding="async" src="/static/assets/images/crown.jpeg"  class="attachment-large size-large wp-image-932" alt="pic" width="500" style="margin-top: 30px;" sizes="(max-width: 500px) 100vw, 500px">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+  </div>
+</section>
+
+<!-- Repeat for other sections -->
+
+<!-- Last Content Section -->
+<section class="row">
+  <div class="col-md-12 text-center">
+    <section class="container">
+      <div class="row">
+          <div class="col-md-6 text-center ">
+              <img decoding="async" width="530" height="450" src="/static/assets/images/kkk.jpg" class="img-fluid " alt="" >
+          </div>
+          <div class="col-md-6">
+              <div class="eael-dual-header">
+                  <h2 class="title"><span style="color: #007DC6;"><strong>UK’S LEADING</strong> </span><span style="color: #54595F;"><strong>DIGITAL DENTAL LABORATORY</strong></span></h2>
+                  <div class="eael-dch-separator-wrap">
+                      <span class="separator-one"></span>
+                      <span class="separator-two"></span>
+                  </div>
+              </div>
+
+              <div class="elementor-element elementor-element-3b44c026 elementor-widget elementor-widget-text-editor">
+                  <div class="elementor-widget-container">
+                      <br>
+                      <br>
+                      <p>Every case is different. And, we realize that. Hira Dental Lab now provides perfect solutions for every single one of your patients. Our zirconia, full metal or acrylic (PMMA or long-term temporaries or provisional restorations) crowns and bridges provide comfort and unmatched durability through 3D printing. Perfectly natural looking crown and bridgework are available to suit every patient perfectly. We design and develop industry leading digital dental solutions for dentists across the UK in house. Quick turnaround is provided to solve your patient’s problems quickly. Our finest quality digital crowns and bridges have served the country for many years and will continue to do so in the future.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </div>
+</section>
+
+
+
+<section class="row">
+  <div class="col-md-12 text-center">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <div class="elementor-element elementor-element-3b44c026 elementor-widget elementor-widget-text-editor">
+                  <div class="elementor-widget-container">
+                      <div class="eael-dual-header">
+                          <h2 class="title">
+                              <br>
+                              <br>
+                              <span style="color: #007DC6;"><strong>ADVANCED DIGITAL DENTAL LAB</strong></span>
+                              <span style="color: #54595F;"><strong>SCANNING WITH 3D PRINTED CROWNS AND BRIDGES</strong></span>
+                          </h2>
+                          <div class="eael-dch-separator-wrap">
+                              <span class="separator-one"></span>
+                              <span class="separator-two"></span>
+                          </div>
+
+                          <div class="line">
+                          <div>
+                              <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <br>
+                      <p>Hira Dental Lab is one of the most advanced digital dental laboratories in the UK. We have modern equipment acquired from leading manufacturers. We are able to process digital intraoral impressions sent to us and work on them with our advanced dental lab CAD software 3shape, EXOCAD and MEDIT and process them with precise 3D printing, milling or laser sintering and produce best fitting crown AND bridgework.</p>
+                      <ul>
+                          <li>Advanced digital lab scanning and handling of intraoral scanned impressions received from the dentists</li>
+                          <li>Advanced 3D modelling systems available in-house for quick finish</li>
+                          <li>Accurate and precise 3D printing laser sintering, and milling to ensure best fitments for crowns and bridgework</li>
+                          <li>UK’s leading digital dentistry lab offering service for every dentist in the country
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+<!-- image -->
+          <div class="col-md-6">
+              <div class="elementor-element elementor-element-124c7253 elementor-widget elementor-widget-image">
+                  <div class="elementor-widget-container">
+                      <br>
+                      <br>
+                      <img fetchpriority="high" decoding="async" src="/static/assets/images/crown33.jpg"  class="attachment-large size-large wp-image-932" alt="pic" width="400" style="margin-top: 25px;" sizes="(max-width: 400px) 100vw, 400px">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+  </div>
+</section>
+
+
+
+<section class="row">
+  <div class="col-md-12 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="eael-dual-header">
+              <h2 class="title"><span style="color: #007DC6;"><strong>WE OFFER MANY DIFFERENT MATERIALS</strong> </span><span style="color: #54595F;"><strong>BASED ON YOUR PATIENT NEEDS</strong></span></h2>
+              <br>
+            <div class="eael-dch-separator-wrap"><span class="separator-one"></span><span class="separator-two"></span></div>
+            <span class="subtext"></span>
+            <span class="eael-dch-svg-icon"></span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-12">
+          <div class="elementor-element elementor-element-7079e13 elementor-widget elementor-widget-text-editor" data-id="7079e13" data-element_type="widget" data-widget_type="text-editor.default">
+            <p>Modern informed patient demands the best materials for everything that goes in their mouths.Hira Dental Lab offers different kinds of materials for crowns and bridges to suit every individual patient requirement. We provide dentists with exclusive quality crowns and bridgework that can give both a natural and custom look on desire. Whether your patient wants a precious metal like gold CROWNS or they are after something more natural, we have a solution for every specific requirement. Also, our dental laboratory provides custom solutions depending on your patient requirement as well. We are the leading dental laboratory in UK and provide:</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+  <!--rest of 4 paragraph -->
+
+  <!-- zirconia and all cards styles-->
+  <style>
+  /* Add any additional custom styles here */
+  .elementskit-info-image-box:hover .elementskit-box-header img {
+      transition: transform 0.5s ease-in-out;
+      transform: scale(1.1);
+  }
+  .elementskit-info-box-title:hover {
+    color: #007DC6;; /* Change text color to blue on hover */
+  }
+</style>
+  </div>
+</section>
+
+
+
+<section class="row">
+  <div class="col-md-12 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <section class="elementor-section elementor-top-section elementor-element elementor-element-76ed36f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+            <div class="elementor-container elementor-column-gap-default">
+              <div class="row">
+                <div class="col-12">
+                  <div class="elementor-element elementor-element-fc502ac ekit-equal-height-enable elementor-widget elementor-widget-elementskit-image-box" data-id="fc502ac" data-element_type="widget" data-widget_type="elementskit-image-box.default">
+                    <div class="ekit-wid-con">
+                      <div class="elementskit-info-image-box ekit-image-box text-center simple-card">
+                        <div class="elementskit-box-header image-box-img-center">
+                          <img decoding="async" width="500" height="400" src="https://www.hiradentallab.com/wp-content/uploads/2022/04/zirconia-1.png" class="img-fluid" alt="">
+                          <br>
+                          <br>
+                        </div>
+                        <div class="elementskit-box-body ekit-image-box-body">
+                          <div class="elementskit-box-content ekit-image-box-body-inner">
+                            <h5 class="elementskit-info-box-title">Zirconia</h5>
+                            <br>
+                            <div class="elementskit-box-style-content">
+                              Crowns and bridges available for all patients. Inlays, on-lays and half-crowns with custom full crowns are available. The Zirconia solution specializes in a natural look and feel with boosted durability and very strong crowns or bridgework. Our zirconia crowns come with a lifetime guarantee. And we keep a record of each crown on cloud-based software, which is shared with you.
+                              <br>
+                              <br>
+                              <br>
+                              <br>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      <!-- rest of zirconia -->
+      <!-- gold start -->
+      <div class="col-md-6">
+          <section class="elementor-section elementor-top-section elementor-element elementor-element-15e625c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+            <div class="elementor-container elementor-column-gap-default">
+              <div class="row">
+                <div class="col-12">
+                  <div class="elementor-element elementor-element-8a22682 ekit-equal-height-enable elementor-widget elementor-widget-elementskit-image-box" data-id="8a22682" data-element_type="widget" data-widget_type="elementskit-image-box.default">
+                    <div class="ekit-wid-con">
+                      <div class="elementskit-info-image-box ekit-image-box text-center simple-card">
+                        <div class="elementskit-box-header image-box-img-center">
+                          <img decoding="async" width="500" height="400" src="/static/assets/images/Gold-and-Full-Precious-Metals.jpg" class="img-fluid" alt="">
+                        </div>
+                        <br>
+                        <div class="elementskit-box-body ekit-image-box-body">
+                          <div class="elementskit-box-content ekit-image-box-body-inner">
+                            <h5 class="elementskit-info-box-title">Gold and Full Precious Metals</h5>
+                            <br>
+                            <div class="elementskit-box-style-content">
+                              Suitable for posterior crown and posterior cantilever bridge, the digital 3d printed gold or full precious metal crown is a thing of beauty. Made from precious metals, the gold crown gives a rich look.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+      <!-- rest of gold start -->
+      <!-- Long Term Provisional -->
+      <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <section class="elementor-section elementor-top-section elementor-element elementor-element-76ed36f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+                <div class="elementor-container elementor-column-gap-default">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="elementor-element elementor-element-fc502ac ekit-equal-height-enable elementor-widget elementor-widget-elementskit-image-box" data-id="fc502ac" data-element_type="widget" data-widget_type="elementskit-image-box.default">
+                        <div class="ekit-wid-con">
+                          <div class="elementskit-info-image-box ekit-image-box text-center simple-card">
+                            <div class="elementskit-box-header image-box-img-center">
+                              <img decoding="async" width="500" height="400" src="https://www.hiradentallab.com/wp-content/uploads/2022/04/hira-dental-2.jpg" class="img-fluid" alt="">
+                            <br>
+                            <br>
+                            <div class="elementskit-box-body ekit-image-box-body">
+                              <div class="elementskit-box-content ekit-image-box-body-inner">
+                                <h5 class="elementskit-info-box-title">Long Term Provisional, Temporary PMMA Acrylic</h5>
+                                <br>
+                                <div class="elementskit-box-style-content">
+                                  These are best suitable for temporary restorations our temporary restorations milled through multilayer PMMA blanks for your patient with accuracy they need for a comfortable solution. Acrylic solutions aren’t as strong as some other
+                                  <br>
+                                  <br>
+                          
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <br>
+          <!-- rest of Long Term Provisional -->
+          <!-- E-Max CAD -->
+          <div class="col-md-6">
+              <section class="elementor-section elementor-top-section elementor-element elementor-element-15e625c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+                <div class="elementor-container elementor-column-gap-default">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="elementor-element elementor-element-8a22682 ekit-equal-height-enable elementor-widget elementor-widget-elementskit-image-box" data-id="8a22682" data-element_type="widget" data-widget_type="elementskit-image-box.default">
+                        <div class="ekit-wid-con">
+                          <div class="elementskit-info-image-box ekit-image-box text-center simple-card">
+                            <div class="elementskit-box-header image-box-img-center">
+                              <img decoding="async" width="500" height="400" src="/static/assets/images/E-Max.png" class="img-fluid" alt="">
+                            </div>
+                            <br>
+                            <div class="elementskit-box-body ekit-image-box-body">
+                              <div class="elementskit-box-content ekit-image-box-body-inner">
+                                <h5 class="elementskit-info-box-title">E-Max CAD</h5>
+                                <br>
+                                <div class="elementskit-box-style-content">
+                                  Very natural looking durable e-max CAD crowns are available for every requirement. These are ceramic solutions that give a natural look and are long-lasting as well. We also do smile makeovers with Emax cad veneers to get the accurate shape like Provisionals done by the dentist or lab made.
+                                  <br>
+                                  <br>
+                                  <br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <!--rest E-Max CAD -->
+        <!-- Titanium -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <section class="elementor-section elementor-top-section elementor-element elementor-element-76ed36f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+                <div class="elementor-container elementor-column-gap-default">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="elementor-element elementor-element-fc502ac ekit-equal-height-enable elementor-widget elementor-widget-elementskit-image-box" data-id="fc502ac" data-element_type="widget" data-widget_type="elementskit-image-box.default">
+                        <div class="ekit-wid-con">
+                          <div class="elementskit-info-image-box ekit-image-box text-center simple-card">
+                            <div class="elementskit-box-header image-box-img-center">
+                              <img decoding="async" width="800" height="500" src="/static/assets/images/Titanium.png" class="img-fluid" alt="">
+                            <br>
+                            <br>
+                            <div class="elementskit-box-body ekit-image-box-body">
+                              <div class="elementskit-box-content ekit-image-box-body-inner">
+                                <h5 class="elementskit-info-box-title">Titanium</h5>
+                                <br>
+              
+                                <div class="elementskit-box-style-content">
+                                  Strongest, most durable and milled titanium crowns and bridges are available from Hira Dental Lab to serve all your patients well. We provide dentists with lifetime lasting 3D printed titanium solutions they’ll be proud to serve patients with.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          <!-- rest Titanium -->
+          <!-- Semi-Precious Metal Crown -->
+          <div class="col-md-6">
+              <section class="elementor-section elementor-top-section elementor-element elementor-element-15e625c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+                <div class="elementor-container elementor-column-gap-default">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="elementor-element elementor-element-8a22682 ekit-equal-height-enable elementor-widget elementor-widget-elementskit-image-box" data-id="8a22682" data-element_type="widget" data-widget_type="elementskit-image-box.default">
+                        <div class="ekit-wid-con">
+                          <div class="elementskit-info-image-box ekit-image-box text-center simple-card">
+                            <div class="elementskit-box-header image-box-img-center">
+                              <img decoding="async" width="500" height="400" src="/static/assets/images/Semi metal.jpg" class="img-fluid" alt="">
+                            </div>
+                            <br>
+                            
+                            <div class="elementskit-box-body ekit-image-box-body">
+                              <div class="elementskit-box-content ekit-image-box-body-inner">
+                                <h5 class="elementskit-info-box-title">Semi-Precious Metal Crown</h5>
+                                <br>
+                                
+                                <div class="elementskit-box-style-content">
+                                  Nickel free silver in color semi-precious metal crowns are available. Dentists will be charged an alloy surcharge depending on the weight of it used. Semi-precious metal crowns are perfect for heavy bite or tight occlusion patients.
+                                  <br>
+                                  <br>
+                                  <br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+  </div>
+</section>
+
+
+<section class="elementor-section elementor-top-section elementor-element ...">
+  <!-- Second Content Section -->
+  <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <section class="elementor-section elementor-top-section elementor-element elementor-element-76ed36f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+            <div class="elementor-container elementor-column-gap-default">
+              <div class="row">
+                <div class="col-12">
+                  <div class="elementor-element elementor-element-fc502ac ekit-equal-height-enable elementor-widget elementor-widget-elementskit-image-box" data-id="fc502ac" data-element_type="widget" data-widget_type="elementskit-image-box.default">
+                    <div class="ekit-wid-con">
+                      <div class="elementskit-info-image-box ekit-image-box text-center simple-card">
+                        <div class="elementskit-box-header image-box-img-center">
+                          <img decoding="async" width="800" height="500" src="/static/assets/images/Epress.png" class="img-fluid" alt="">
+                        <br>
+                        
+                        <div class="elementskit-box-body ekit-image-box-body">
+                          <div class="elementskit-box-content ekit-image-box-body-inner">
+                            <h5 class="elementskit-info-box-title">E-Max Press</h5>
+                            <br>
+          
+                            <div class="elementskit-box-style-content">
+                              If your patient likes something very good-looking and perfectly natural in aesthetic, the E-Max Press will suit best. We provide finest quality E-Max Press solutions for every patient.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- rest E-Max Press -->
+        <!-- full no-precious metal crown -->
+        <div class="col-md-6">
+          <section class="elementor-section elementor-top-section elementor-element elementor-element-15e625c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+            <div class="elementor-container elementor-column-gap-default">
+              <div class="row">
+                <div class="col-12">
+                  <div class="elementor-element elementor-element-8a22682 ekit-equal-height-enable elementor-widget elementor-widget-elementskit-image-box" data-id="8a22682" data-element_type="widget" data-widget_type="elementskit-image-box.default">
+                    <div class="ekit-wid-con">
+                      <div class="elementskit-info-image-box ekit-image-box text-center simple-card">
+                        <div class="elementskit-box-header image-box-img-center">
+                          <img decoding="async" width="500" height="400" src="/static/assets/images/Full non-precious.png" class="img-fluid" alt="">
+                        </div>
+                        <br>
+                        
+                        <div class="elementskit-box-body ekit-image-box-body">
+                          <div class="elementskit-box-content ekit-image-box-body-inner">
+                            <h5 class="elementskit-info-box-title">Full Non-Precious Metal Crown</h5>
+                            <br>
+                            
+                            <div class="elementskit-box-style-content">
+                              Nickel free cobalt chromium full non-precious metal crowns that are silver in color. These are very durable and provide the freedom of use.
+                              <br>
+                              <br>
+                              <br>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+     <!--  rest full no-precious metal crown -->
+     <!-- 2 last para -->
+  <div class="container">
+      <section class="row">
+          <div class="col-md-12 text-center">
+              <br>
+              <br>
+              <h2 span style="color: #007DC6;"><strong>ACCURATE FITTING</strong></span>
+                  <span style="color: #54595F;"><strong>TO GIVE YOUR PATIENT A NATURAL REFINED LOOK AND FEEL</strong></span>
+                  <br>
+                  <br>
+              <div class="eael-dch-separator-wrap">
+                  <span class="separator-one"></span>
+                  <span class="separator-two"></span>
+              </div>
+          </div>
+      
+          <div class="col-md-12">
+              <p class="text-center">Patient satisfaction is very important for dentists in the UK. Hira Dental Lab never compromises on FIXED PROTHETHTICS FIT SURFACES. So, give your patient a feeling of trust and satisfaction with highest quality dental crown and bridgework. All our solutions need:</p>
+          </div>
+          <ul>
+              <li>Digital intraoral scanned impression of your patient’s jaw and mouth</li>
+              <li>Completed dental laboratory prescription form</li>
+              <br>
+              <p>We may also need:</p>
+          </ul>
+      </div>
+          <ul>
+              <li>Alginate impression for opposing</li>
+              <li>Silicone or wax bite</li>
+              <li>Photos off work before and after to get the best shade match</li>
+          </ul>
+      </section>
+     <!--rest 2 last para -->
+     <!-- last para -->
+     <div class="container">
+      <section class="row">
+          <div class="col-md-12 text-center">
+              <br>
+              <br>
+              <h2 span style="color: #007DC6;"><strong>WHAT DENTISTS GET FROM </strong></span>
+                  <span style="color: #54595F;"><strong>HIRA DENTAL LAB?</strong></span>
+                  <br>
+                  <br>
+              <div class="eael-dch-separator-wrap">
+                  <span class="separator-one"></span>
+                  <span class="separator-two"></span>
+              </div>
+          </div>
+      
+          <div class="col-md-12">
+              <p class="text-center">Send us your patient impressions and any other requirements. We will design and model your required crowns and bridges to match the requirements comprehensively. We provide solutions for dentists from across the UK. Our 3D printed crowns and bridges are based on digital impressions and intraoral scans sent to us by the dentist. We ensure accuracy with digital dentistry techniques. Get in touch now to find out more.</p>
+          </div>
+  </div>
+</section>
+
+
+<!-- Scripts and closing tags -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
+</body>
+</html>

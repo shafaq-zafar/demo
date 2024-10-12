@@ -1,0 +1,284 @@
+{% include "header.html" %}
+<style>
+  body {
+    font-size: 1rem;
+    font-family: 'Roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 10px; /* Added margin for spacing */
+    border: 30px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card:hover .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  /* Inner text and icons styling */
+  a span {
+    color: #007dc6;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+/* Size and color for icons */
+  a i.fas.fa-arrow-circle-right {
+    color: #007dc6;
+    font-size: 18px;
+  }
+
+  .para{
+    font-size: 20px;/* Font size for text */
+  }
+
+  .custom-icon {
+    font-size: 50px; /* Adjust the size as needed */
+    color: #007dc6; /* Change the color using a hexadecimal or other valid color code */
+  }
+  @media (max-width: 990px) {
+    .row {
+      display: grid;
+      grid-template-columns: 1fr; /* Display one card in one row on smaller screens */
+      gap: 20px;
+    }
+
+    .col-md-4 {
+      width: 100%;
+    }
+  }
+
+
+
+</style>
+</head>
+
+<body>
+
+  <!-- Container -->
+  <div class="container">
+    <!-- First Row Cards-->
+    <div class="row">
+      <!-- First Card-->
+<div class="col-md-4 mx-auto">
+  <div class="flip-card">
+    <div class="flip-card-inner mt-5">
+      <div class="flip-card-front mt-5">
+        <div class="elementor-widget mt-4">
+          <i class="fas fa-ticket-alt custom-icon"></i>
+        </div>
+        <p class="para">Hira Dental Lab’s lab ticket.</p>
+        <a href="/static/assets/images/hira.pdf" target="_blank">
+          <i class="fas fa-arrow-circle-right" style="margin-top: 20%;"></i>
+          <span>LAB TICKET</span>
+        </a>
+      </div>
+      <div class="flip-card-back mt-5">
+        <div class="elementor-widget mt-4">
+          <i class="fas fa-ticket-alt custom-icon"></i>
+        </div>
+        <p class="para">Hira Dental Lab’s lab ticket.</p>
+        <a href="/static/assets/images/hira.pdf" target="_blank">
+          <i class="fas fa-arrow-circle-right" style="margin-top: 20%;"></i>
+          <span>LAB TICKET</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+     <!-- Second Card-->
+<div class="col-md-4 mx-auto">
+  <div class="flip-card">
+    <div class="flip-card-inner mt-5">
+      <div class="flip-card-front mt-5">
+        <div class="elementor-widget mt-4">
+                <i class="fa fa-tags fa-3x" aria-hidden="true" style="color: #007dc6"></i>
+              </div>
+              <p class="para">Hira dental lab free Royal Mail postage label.</p>
+              <a href="/static/assets/images/post.pdf" target="_blank">
+          <i class="fas fa-arrow-circle-right" style="margin-top: 11%;"></i>
+          <span>POST LABEL</span>
+        </a>
+      </div>
+      <div class="flip-card-back mt-5">
+<div class="elementor-widget mt-4">
+                <i class="fa fa-tags fa-3x" aria-hidden="true" style="color: #007dc6"></i>
+              </div>
+              <p class="para">Hira dental lab free Royal Mail postage label.</p>        
+              <a href="/static/assets/images/post.pdf" target="_blank">
+          <i class="fas fa-arrow-circle-right" style="margin-top: 11%;"></i>
+          <span>POST LABEL</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Third Card-->
+    <div class="col-md-4 mx-auto">
+      <div class="flip-card">
+        <div class="flip-card-inner mt-5">
+          <div class="flip-card-front mt-5">
+            <div class="elementor-widget mt-4">
+              <i class="fas fa-ticket-alt custom-icon"></i>
+            </div>
+            <p class="para">Basic instructions to find SMOP Software online and download
+              instructions.</p>
+              <a href="/static/assets/images/Smop.pdf" target="_blank">
+            <i class="fas fa-arrow-circle-right"></i>
+            <span>HOW CAN I INSTALL SMOP</span>
+            </a>
+          </div>
+          <div class="flip-card-back mt-5">
+            <div class="elementor-widget mt-4"><!-- Icon Div -->
+              <i class="fas fa-ticket-alt custom-icon"></i>
+            </div>
+            <p class="para">Basic instructions to find SMOP Software online and download
+              instructions.</p>
+              <a href="/static/assets/images/Smop.pdf" target="_blank">
+              <i class="fas fa-arrow-circle-right"></i>
+              <span>HOW CAN I INSTALL SMOP</span>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- First Row Ends Here-->
+
+
+<!-- Second Row Cards-->
+
+    <div class="row"><!-- Second Row Div start's from here -->
+      <!-- First Card-->
+
+     <div class="col-md-4 mx-auto">
+      <div class="flip-card">
+        <div class="flip-card-inner mt-5">
+          <div class="flip-card-front mt-5">
+            <div class="elementor-widget mt-4">
+              <i class="fas fa-file-export custom-icon"></i>
+            </div>
+            <p class="para">How to export .STL files and upload to DDX</p>
+            <a href="/static/assets/images/itreo.pdf" target="_blank">
+            <i class="fas fa-arrow-circle-right" style="margin-top: 11%;"></i>
+            <span>EXPORTING SCANS</span>
+            </a>
+          </div>
+          <div class="flip-card-back mt-5">
+            <div class="elementor-widget mt-4"><!-- Icon Div -->
+              <i class="fas fa-file-export custom-icon"></i>
+            </div>
+            <p class="para">How to export .STL files and upload to DDX</p>
+            <a href="/static/assets/images/itreo.pdf" target="_blank">
+             <i class="fas fa-arrow-circle-right" style="margin-top: 11%;"></i>
+              <span>EXPORTING SCANS</span>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- Second Card-->
+
+     <div class="col-md-4 mx-auto">
+      <div class="flip-card">
+        <div class="flip-card-inner mt-5">
+          <div class="flip-card-front mt-5">
+            <div class="elementor-widget mt-4">
+              <i class="fas fa-video custom-icon"></i>
+            </div>
+            <p class="para"> How can I forward CBCT scans to the Lab for planning surgical
+              guide</p>
+              <a href="/static/assets/videos/video.mp4" target="_blank">
+            <i class="fas fa-arrow-circle-right" style="margin-top: 10%"></i>
+            <span>PLEASE FOLLOW THIS VIDEO</span>
+            </a>
+          </div>
+          <div class="flip-card-back mt-5">
+            <div class="elementor-widget mt-4"><!-- Icon Div -->
+              <i class="fas fa-video custom-icon"></i>
+            </div>
+            <p class="para"> How can I forward CBCT scans to the Lab for planning surgical
+              guide</p>
+              <a href="/static/assets/videos/video.mp4" target="_blank">
+              <i class="fas fa-arrow-circle-right" style="margin-top: 10%"></i>
+              <span>PLEASE FOLLOW THIS VIDEO</span>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Third Card-->
+
+      <div class="col-md-4 mx-auto">
+        <div class="flip-card">
+          <div class="flip-card-inner mt-5">
+            <div class="flip-card-front mt-5">
+              <div class="elementor-widget mt-4">
+                <i class="fa fa-tags fa-3x" aria-hidden="true" style="color: #007dc6"></i>
+              </div>
+              <p class="para"> Hira Dental lab cross infection control policy</p>
+              <a href="/static/assets/images/assurance.pdf" target="_blank">
+              <i class="fas fa-arrow-circle-right"  style="margin-top: 11%;"></i>
+              <span>HIRA DENTAL LAB ASSURANCE</span>
+              </a>
+            </div>
+            <div class="flip-card-back mt-5">
+              <div class="elementor-widget mt-4"><!-- Icon Div -->
+                <i class="fa fa-tags fa-3x" aria-hidden="true" style="color: #007dc6"></i>
+              </div>
+              <p class="para"> Hira Dental lab cross infection control policy</p>
+              <a href="/static/assets/images/assurance.pdf" target="_blank">
+                <i class="fas fa-arrow-circle-right"  style="margin-top: 11%;"></i>
+                <span>HIRA DENTAL LAB ASSURANCE</span>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!--Row Div close here-->
+  </div><!--Container Div close here-->
+
+
+</body>
+{% include "footerr.html" %}

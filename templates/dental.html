@@ -1,0 +1,347 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    body {
+        font-size: 1rem;
+        font-family: 'Roboto', 'sans-serif';
+        margin: 0;
+        padding: 0;
+    } 
+ /* horizontal line */
+.progress {
+    width: 45%;
+    margin-left: 28%;
+}
+.line{
+    width: 100%;
+    margin-right: 100%;
+}
+
+.card-title:hover {
+    color: #007DC6;
+    cursor: pointer;
+}
+
+
+/* WhatsApp chat Widget styling */
+.whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .whatsapp-widget:hover {
+    background-color: #128C7E;
+  }
+  
+  .whatsapp-widget .whatsapp-icon {
+   display: block;
+   width: 40px;
+   height: 40px;
+  }
+  
+  /* Hide the widget initially */
+  .whatsapp-chat-box {
+   display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 80px;
+   background-color: #ffffff;
+   border: 1px solid #e1e1e1;
+   border-radius: 8px;
+   box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+   z-index: 998;
+  }
+  
+  .whatsapp-chat-box iframe {
+   width: 100%;
+   height: 100%;
+   border: 0;
+  }
+</style>
+<title>Dental Implantology UK-Hira Dental Lab</title>
+
+      <!-- Whatsapp Chat Widget -->
+      <div class="whatsapp-widget" id="whatsapp-widget">
+        <a href="https://wa.me/+442476263962" target="_blank" rel="noopener noreferrer">
+            <div class="whatsapp-icon">
+                <svg>
+                    <path d="M12.9821 10.1115C12.7029 10.7767 11.5862 11.442 10.7486 11.575C10.1902 11.7081 9.35269 11.8411 6.84003 10.7767C3.48981 9.44628 1.39593 6.25317 1.25634 6.12012C1.11674 5.85403 2.13001e-06 4.39053 2.13001e-06 2.92702C2.13001e-06 1.46351 0.83755 0.665231 1.11673 0.399139C1.39592 0.133046 1.8147 1.01506e-06 2.23348 1.01506e-06C2.37307 1.01506e-06 2.51267 1.01506e-06 2.65226 1.01506e-06C2.93144 1.01506e-06 3.21063 -2.02219e-06 3.35022 0.532183C3.62941 1.19741 4.32736 2.66092 4.32736 2.79397C4.46696 2.92702 4.46696 3.19311 4.32736 3.32616C4.18777 3.59225 4.18777 3.59224 3.90858 3.85834C3.76899 3.99138 3.6294 4.12443 3.48981 4.39052C3.35022 4.52357 3.21063 4.78966 3.35022 5.05576C3.48981 5.32185 4.18777 6.38622 5.16491 7.18449C6.42125 8.24886 7.39839 8.51496 7.81717 8.78105C8.09636 8.91409 8.37554 8.9141 8.65472 8.648C8.93391 8.38191 9.21309 7.98277 9.49228 7.58363C9.77146 7.31754 10.0507 7.1845 10.3298 7.31754C10.609 7.45059 12.2841 8.11582 12.5633 8.38191C12.8425 8.51496 13.1217 8.648 13.1217 8.78105C13.1217 8.78105 13.1217 9.44628 12.9821 10.1115Z" transform="translate(12.9597 12.9597)" fill="#FAFAFA"></path>
+    
+                    <path d="M0.196998 23.295L0.131434 23.4862L0.323216 23.4223L5.52771 21.6875C7.4273 22.8471 9.47325 23.4274 11.6637 23.4274C18.134 23.4274 23.4274 18.134 23.4274 11.6637C23.4274 5.19344 18.134 -0.1 11.6637 -0.1C5.19344 -0.1 -0.1 5.19344 -0.1 11.6637C-0.1 13.9996 0.624492 16.3352 1.93021 18.2398L0.196998 23.295ZM5.87658 19.8847L5.84025 19.8665L5.80154 19.8788L2.78138 20.8398L3.73978 17.9646L3.75932 17.906L3.71562 17.8623L3.43104 17.5777C2.27704 15.8437 1.55796 13.8245 1.55796 11.6637C1.55796 6.03288 6.03288 1.55796 11.6637 1.55796C17.2945 1.55796 21.7695 6.03288 21.7695 11.6637C21.7695 17.2945 17.2945 21.7695 11.6637 21.7695C9.64222 21.7695 7.76778 21.1921 6.18227 20.039L6.17557 20.0342L6.16817 20.0305L5.87658 19.8847Z" transform="translate(7.7758 7.77582)" fill="white" stroke="white" stroke-width="0.2"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
+    
+    <script>
+        function openWhatsApp() {
+            // Replace YOUR_PHONE_NUMBER with your actual WhatsApp number
+            var phoneNumber = '+442476263962';  // Use the international format without spaces or special characters
+            
+            // Create a WhatsApp link
+            var whatsappLink = 'https://wa.me/+442476263962' + phoneNumber;
+            
+            // Open the link in a new tab or window
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="eael-dual-header text-center">
+                <h1 class="title">
+                    <span style="color: #007DC6;"><strong>DENTAL </strong></span>
+                    <span style="color: #54595F;"><strong>IMPLANTOLOGY</strong></span>
+                </h1>
+                <div class="eael-dch-separator-wrap">
+                    <span class="separator-one"></span>
+                    <span class="separator-two"></span>
+                </div>
+            </div>
+            <!-- horizontal line -->
+            <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50" style="height: 6px; background-color: #54595F;">
+                <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="elementor-section elementor-top-section elementor-element ...">
+    <!-- First Content Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="elementor-element elementor-element-3b44c026 elementor-widget elementor-widget-text-editor">
+                    <div class="elementor-widget-container">
+                        <div class="eael-dual-header">
+                            <h2 class="title">
+                                <br>
+                                <br>
+                                <span style="color: #007DC6;"><strong>NATURAL LOOKING DURABLE DENTAL</strong></span>
+                                <span style="color: #54595F;"><strong>IMPLANT CROWNS AND BRIDGES FOR YOUR PATIENTS</strong></span>
+                            </h2>
+                            <div class="eael-dch-separator-wrap">
+                                <span class="separator-one"></span>
+                                <span class="separator-two"></span>
+                            </div>
+<!-- horizontal line -->
+                            <div class="line">
+                            <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50" style="height: 6px; background-color: #54595F;">
+                                <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                        <p>Hira Dental Lab specializes in Implantology and Digital Dentistry in the UK. We provide screw retained and cement retained Implant restorations. Our services include milled restorations from intra oral scans and also from traditional impressions. We can provide customized abutments in titanium, cocr or Zirconia. Materials are selected in accordance with the patient’s requirement and have a lifetime guarantee. We have incorporated Cutting Edge technology consisting of Various CadCam Software & 3D Printers. 3D printing completely eliminated human error that may occur with Conventional Impressions. We have invested heavily into 3D printing and experienced CadCam technicians.
+                            We Therefore offer First Scanbody Free of Cost. We want you to experience the precision first hand and be truly amazed with the results. From Titanium to zirconia and peek , we have customized abutment solutions for every implant connection.</p>
+                    </div>
+                </div>
+            </div>
+<!-- image -->
+            <div class="col-md-6">
+                <div class="elementor-element elementor-element-124c7253 elementor-widget elementor-widget-image">
+                    <div class="elementor-widget-container">
+                        <br>
+                        <br>
+
+                        <img fetchpriority="high" decoding="async" src="/static/assets/images/implantology.png" class="attachment-large size-large wp-image-932" alt="pic" width="500" style="margin-top: 30px;" sizes="(max-width: 500px) 100vw, 500px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- rest of paragraph -->
+<!-- 2 paragraph -->
+<section class="container">
+    <div class="row">
+        <div class="col-md-6 text-center ">
+            <img fetchpriority="high" decoding="async" src="/static/assets/images/screw 1.jpg" class="attachment-large size-large wp-image-932" alt="pic" width="300" style="margin-top: 30px;" sizes="(max-width: 300px) 100vw, 300px">
+        </div>
+        <div class="col-md-6">
+            <div class="eael-dual-header">
+                <h2 class="title"><span style="color: #007DC6;"><strong>METAL ABUTMENT</strong> </span><span style="color: #54595F;"><strong>FOR DENTAL IMPLANTS</strong></span></h2>
+                <div class="eael-dch-separator-wrap">
+                    <span class="separator-one"></span>
+                    <span class="separator-two"></span>
+                </div>
+            </div>
+            <p>With leading technology and vast experience in digital dentistry, Hira Dental Lab is able to produce accurate implants from digital and conventional impressions. Our aim is to help our dentists provide precise and accurate implant restorations eliminating any Micro-leakage. We have an excellent team with extensive experience in Implantology, therefore our quality is not compromised in any way. We are extremely Confident with our Quality and services that every restoration comes with a lifetime Guarantee.</p>
+            <h5><strong>SCAN BODIES</strong></h5>
+                            <p>Scan Bodies play a Crucial role in obtaining the best implant Digital workflow. Therefore it’s important that the scan bodies are obtained Directly from the lab. Our lab is then able to manage Correction factors and nominal values in 5 micron accuracy to prevent microleakage and tension on the screw (which causes abutment screws being seized or broken). Most of the labs are unable to provide this</p>
+                            <h5><strong>Soft tissue management</strong></h5>
+                            <p>Soft Tissue is one of the latest developments in implant Dentistry. It plays a significant role in determining the success of an implant restoration. The growth of soft tissue around the implant neck and its amalgamation with polished Zirconia are the key factors.</p>
+                            <h5><strong>Immediate loading for full arch or single tooth restoration</strong></h5>
+                            <p>We can do fully guided implant planning through smop ,Blue sky bio or exoplan for full arch immediate loading or single tooth restorations.</p>
+                            
+    </div>
+</section>
+
+<section class="elementor-section elementor-top-section elementor-element ...">
+    <!-- Second Content Section -->
+    <div class="container">
+        <section class="row">
+            <div class="col-md-12 text-center">
+                <br>
+                <br>
+                <br>
+                <h2 span style="color: #007DC6;"><strong>TI-BASE OR VARIO BASE WITH SCREW RETAINED</strong></span>
+                    <span style="color: #54595F;"><strong>ZIRCONIA CROWNS AND BRIDGES</strong></span>
+                <div class="eael-dch-separator-wrap">
+                    <span class="separator-one"></span>
+                    <span class="separator-two"></span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">We are able to use various gingival heights and up to 8mm cementable length in Customized tie bases. These are the most effective and economical solutions that we provide for digital workflow and it comes with a lifetime Guarantee. This also allows perfect amalgamation of the soft tissue to the polished zirconia, which is not possible with other materials. These restorations also have excellent retrievability and can easily be serviced. This gives them Edge over other restorations. We are able to work with the Tie Base abutments for all the implant connections available in the UK.</p>
+            </div>
+        </section>
+    </div>
+</section>
+
+<!-- Repeat for other sections -->
+
+
+<section class="elementor-section elementor-top-section elementor-element ...">
+    <!-- First Content Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="elementor-element elementor-element-3b44c026 elementor-widget elementor-widget-text-editor">
+                    <div class="elementor-widget-container">
+                        <div class="eael-dual-header">
+                            <h2 class="title">
+                                <br>
+                                <br>
+                                <span style="color: #007DC6;"><strong>NATURAL LOOKING DURABLE DENTAL</strong></span>
+                                <span style="color: #54595F;"><strong>IMPLANTS FOR YOUR PATIENT</strong></span>
+                            </h2>
+                            <div class="eael-dch-separator-wrap">
+                                <span class="separator-one"></span>
+                                <span class="separator-two"></span>
+                            </div>
+<!-- horizontal line -->
+                            <div class="line">
+                            <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50" style="height: 6px; background-color: #54595F;">
+                                <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                        <p>All on 4 or 6 implant full arch cases are managed to the best possible restorative solution according to the vertical height and given situation from the Surgeon.</p>
+                        1) titanium bar with Zirconia suprastructure<br>
+                        2) titanium bar with acrylic wraparound<br>
+                        3) Porcelain fused metal where vertical height is less than 10mm.
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+<!-- image -->
+            <div class="col-md-6">
+                <div class="elementor-element elementor-element-124c7253 elementor-widget elementor-widget-image">
+                    <div class="elementor-widget-container">
+                        <br>
+                        <br>
+
+                        <img fetchpriority="high" decoding="async" src="/static/assets/images/dental2.png" class="attachment-large size-large wp-image-932" alt="pic" width="500" style="margin-top: 30px;" sizes="(max-width: 500px) 100vw, 500px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <div class="container">
+    <section class="row">
+    <div class="col-md-6 eael-dual-header-content-align-left">
+        <h2 span style="color: #007DC6;"><strong>CUSTOM ABUTMENTS</strong></span>
+            <span style="color: #54595F;"><strong>FOR DENTAL IMPLANTS:
+            </strong></span></h2>
+        <div class="eael-dch-separator-wrap">
+            <span class="separator-one"></span>
+            <span class="separator-two"></span>
+        </div>
+        <br>
+        <p>Some difficult and challenging Cases may require custom abutments due to the placement angle of the Implant. Our Highly Skilled Technicians select from the Following abutments after carefully observing the design and location of the implant:</p>
+            <p>● Titanium Abutments</p>
+            <p>● Zirconia Abutments</p>
+            <p>● Peek Abutments</p>
+    </div>
+</section>
+</div>   
+</section>
+
+
+<!-- rest of paragraph -->
+<!-- 2 paragraph -->
+
+
+
+<section class="row">
+    <div class="col-md-12 text-center">
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6 text-center ">
+                    <img fetchpriority="high" decoding="async" src="/static/assets/images/tt.png" wp-image-932" alt="pic" width="300" style="margin-top: 30px;" sizes="(max-width: 300px) 100vw, 300px">
+                </div>
+                <div class="col-md-6">
+                    <div class="eael-dual-header">
+                    
+                        <div class="eael-dch-separator-wrap">
+                            <span class="separator-one"></span>
+                            <span class="separator-two"></span>
+                        </div>
+                    </div>
+                
+                    <div class="container-fluid">
+                        <section class="row elementor-section elementor-top-section elementor-element-56ffa9d elementor-hidden-tablet elementor-hidden-phone elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+                            <div class="col-md-12">
+                                <p>Custom abutments are used in cases to prevent aesthetics being compromised. At times it is inevitable to have screw channels on the labial aspect of the anterior teeth. We design a
+                                    customised abutment for such cases allowing maximum aesthetics and functionality. Also in some cases where the implant is too deep.<br>★ <strong>Titanium Custom Abutments</strong> are fabricated for Cement Retained Implant Crowns &amp; Bridges or screw retained in certain situations where the implant is too palatal or very close to the contact points. These abutments are highly accurate and can withstand high occlusal forces. Therefore both the dentists and the Patients can be rest assured that they are receiving the optimum restorations.<br>Titanium custom bars are also fabricated if required in certain situations for zirconia suprastructure.<br>★ <strong>Zirconia Custom Abutments</strong> are the most aesthetically friendly option offering a refined
+                                    finish. These abutments are therefore suited where there is a high aesthetics requirement
+                                    and the implants are placed in the anterior segment.<br>★<strong> Peek Custom Abutments for Dental Implants</strong><br>We can provide peek custom abutments for single-unit or full-arch restoration where patients
+                                    demand an extremely lightweight restoration. One of the main advantages of peek framework is
+                                    the flexibility and flexural strength.</p>
+                            </div>
+                            
+                                    </div>
+                                </footer>
+                                </main>
+                            <!-- Add any additional scripts here -->
+                        </body>
+                        </html>
+                        </section>
+                    </div>
+                    </div>
+                    <div>
+                    <div>
+                    </div> 
+                    </div> 
+                </div> 
+    </div>
+</section>
+
+
+<!-- Scripts and closing tags -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
+</body>
+</html>

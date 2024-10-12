@@ -1,0 +1,260 @@
+{% extends "base.html" %}
+{% block content %}
+
+<title>CONTACT-Hira Dental Lab</title>
+<style>
+  body {
+    font-size: 1rem;
+    font-family: 'Roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+} 
+.progress {
+    width: 45%;
+    margin-left: 28%;
+}
+
+.hira {
+	margin-bottom: 1%;
+}
+.image img {
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 4px solid #046E89;
+    box-shadow: 20px 20px 0px 0px #046E89;
+    outline: 3px solid #046E89;
+   
+}
+.form-group input {
+	border-radius:20px;
+}
+.buttoon {
+	background:#007DC6 ;
+	border-radius:15px;
+	color:#fff;
+}
+/* Animation of card and contact form  */
+    @keyframes slideFromLeft {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideFromRight {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+}
+/* Animation of card and contact form  */ 
+
+.image {
+  animation: slideFromLeft 1.5s ease-in-out;
+}
+
+.contact {
+  animation: slideFromRight 1.5s ease-in-out;
+}
+
+
+.contact-info {
+  border: 2px solid #dee2e6; /* Replace 'your-border-color' with the desired color code */
+  padding: 10px; /* Add padding for better appearance */
+	border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+}
+.contact-info:hover {
+	 border: 2px solid #046E89; 
+	box-shadow: 10px 10px 0px 0px #046E89;
+	transition:0.5s;
+}
+.contact-info {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+.contact-info.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* WhatsApp chat Widget styling */
+.whatsapp-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.whatsapp-widget:hover {
+  background-color: #128C7E;
+}
+
+.whatsapp-widget .whatsapp-icon {
+ display: block;
+ width: 40px;
+ height: 40px;
+}
+
+/* Hide the widget initially */
+.whatsapp-chat-box {
+ display: none;
+ position: fixed;
+ bottom: 20px;
+ right: 80px;
+ background-color: #ffffff;
+ border: 1px solid #e1e1e1;
+ border-radius: 8px;
+ box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+ z-index: 998;
+}
+
+.whatsapp-chat-box iframe {
+ width: 100%;
+ height: 100%;
+ border: 0;
+}
+</style>
+
+<main>
+      <!-- Whatsapp Chat Widget -->
+      <div class="whatsapp-widget" id="whatsapp-widget">
+        <a href="https://wa.me/+442476263962" target="_blank" rel="noopener noreferrer">
+            <div class="whatsapp-icon">
+                <svg>
+                    <path d="M12.9821 10.1115C12.7029 10.7767 11.5862 11.442 10.7486 11.575C10.1902 11.7081 9.35269 11.8411 6.84003 10.7767C3.48981 9.44628 1.39593 6.25317 1.25634 6.12012C1.11674 5.85403 2.13001e-06 4.39053 2.13001e-06 2.92702C2.13001e-06 1.46351 0.83755 0.665231 1.11673 0.399139C1.39592 0.133046 1.8147 1.01506e-06 2.23348 1.01506e-06C2.37307 1.01506e-06 2.51267 1.01506e-06 2.65226 1.01506e-06C2.93144 1.01506e-06 3.21063 -2.02219e-06 3.35022 0.532183C3.62941 1.19741 4.32736 2.66092 4.32736 2.79397C4.46696 2.92702 4.46696 3.19311 4.32736 3.32616C4.18777 3.59225 4.18777 3.59224 3.90858 3.85834C3.76899 3.99138 3.6294 4.12443 3.48981 4.39052C3.35022 4.52357 3.21063 4.78966 3.35022 5.05576C3.48981 5.32185 4.18777 6.38622 5.16491 7.18449C6.42125 8.24886 7.39839 8.51496 7.81717 8.78105C8.09636 8.91409 8.37554 8.9141 8.65472 8.648C8.93391 8.38191 9.21309 7.98277 9.49228 7.58363C9.77146 7.31754 10.0507 7.1845 10.3298 7.31754C10.609 7.45059 12.2841 8.11582 12.5633 8.38191C12.8425 8.51496 13.1217 8.648 13.1217 8.78105C13.1217 8.78105 13.1217 9.44628 12.9821 10.1115Z" transform="translate(12.9597 12.9597)" fill="#FAFAFA"></path>
+    
+                    <path d="M0.196998 23.295L0.131434 23.4862L0.323216 23.4223L5.52771 21.6875C7.4273 22.8471 9.47325 23.4274 11.6637 23.4274C18.134 23.4274 23.4274 18.134 23.4274 11.6637C23.4274 5.19344 18.134 -0.1 11.6637 -0.1C5.19344 -0.1 -0.1 5.19344 -0.1 11.6637C-0.1 13.9996 0.624492 16.3352 1.93021 18.2398L0.196998 23.295ZM5.87658 19.8847L5.84025 19.8665L5.80154 19.8788L2.78138 20.8398L3.73978 17.9646L3.75932 17.906L3.71562 17.8623L3.43104 17.5777C2.27704 15.8437 1.55796 13.8245 1.55796 11.6637C1.55796 6.03288 6.03288 1.55796 11.6637 1.55796C17.2945 1.55796 21.7695 6.03288 21.7695 11.6637C21.7695 17.2945 17.2945 21.7695 11.6637 21.7695C9.64222 21.7695 7.76778 21.1921 6.18227 20.039L6.17557 20.0342L6.16817 20.0305L5.87658 19.8847Z" transform="translate(7.7758 7.77582)" fill="white" stroke="white" stroke-width="0.2"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
+    
+    <script>
+        function openWhatsApp() {
+            // Replace YOUR_PHONE_NUMBER with your actual WhatsApp number
+            var phoneNumber = '+442476263962';  // Use the international format without spaces or special characters
+            
+            // Create a WhatsApp link
+            var whatsappLink = 'https://wa.me/+442476263962' + phoneNumber;
+            
+            // Open the link in a new tab or window
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+
+
+
+
+<section style="background-color:#F5F8F9;">
+  <div class="container ">
+    <div class="row">
+      <div class="col-12 p-5">
+	  <div class="hira">
+      <div class="text-center">
+      <h2 class="title" style="margin-top: 5%;">
+    <span style="color: #007DC6;">CONTACT </span>
+    <span style="color: #54595F;">HIRA DENTAL LAB</span>
+</h2>
+                    <div class="eael-dch-separator-wrap">
+                        <span class="separator-one"></span>
+                        <span class="separator-two"></span>
+                    </div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50" style="height: 6px ;background-color: #54595F;">
+  <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+</div>
+</div>
+      </div>
+      </div>
+      </div>
+	  <br><br><br>
+	  
+
+</section>
+<br>
+   
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 image">
+        <img src="/static/assets/images/hira.png" class="img-fluid" alt="Responsive Image">
+      </div>
+      <br>
+      <div class="col-md-6 mt-5 contact">
+        <h4>Contact</h4>
+        <form method='post' action="{% url 'Contactus' %}">
+           {% csrf_token %} 
+           {{ form.as_p }}
+
+        <div class="form-group">
+          <input type="text" id="name" class="form-control" name="name" placeholder="Name" required="">
+        </div>
+        
+        <div class="form-group">
+          <input type="email" id="email" class="form-control" name="email" placeholder="Email" spellcheck="false" required="">
+        </div>
+        <div class="form-group">
+          <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required="">
+        </div>
+        <div class="form-group">
+          <textarea id="message" class="form-control" name="message" placeholder="Message" rows="5" style="height: 150px; border-radius:20px;"></textarea>
+        </div>
+        <button type="submit" class="btn buttoon">Send Request</button>
+      </div>
+    </div>
+  </div>
+</form>
+	  <br><br><br><br>
+   
+            <iframe width="100%" height="450" frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3100.503447295926!2d-1.5118534841964302!3d52.39325329587499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48774271f7431669%3A0xa7bebd7296487f87!2s02%20Ulverscroft%20Rd%2C%20Coventry%20CV3%205EZ%2C%20United%20Kingdom!5e0!3m2!1sen!2suk!4v1664580771234!5m2!1sen!2suk"
+              allowfullscreen=""></iframe>
+  <br><br>
+   <div class="container">
+    <div class="row">
+        <div class="col-md-4 text-center">
+		<div class="contact-info">
+            <i class="fas fa-map-marked-alt fa-3x" style="color:#007DC6"></i>
+            <h4 class="elementor-heading-title elementor-size-default" style="color:#007DC6">Address</h4>
+            <p><a href="https://business.google.com/n/9393187898035055011/profile?fid=16779587591370519168"><span class="ruyPpc" style="color:#1ab1e5;">02 Ulverscroft Road, Cheylesmore, Coventry CV3 5EZ, United Kingdom</span></a></p>
+			</div>
+        </div>
+        <div class="col-md-4 text-center">
+		<div class="contact-info">
+            <i class="fas fa-envelope fa-3x" style="color:#007DC6"></i>
+            <h4 class="elementor-heading-title elementor-size-default" style="color:#007DC6">Email Address</h4>
+            <a href="mailto:info@hiradentallab.com" style="color:#1ab1e5;">info@hiradentallab.com</a>
+			</div>
+        </div>
+<div class="col-md-4 text-center">
+    <div class="contact-info">
+        <i class="fas fa-phone-alt fa-3x" style="color:#007DC6"></i>
+        <h4 class="elementor-heading-title elementor-size-default" style="color:#007DC6">Phone Number</h4>
+        <p>+44 24 7626 3962</p>
+    </div>
+</div>
+</div>
+</div>
+ 
+
+<script>
+    $(document).ready(function() {
+        $(".contact-info").addClass("show");
+    });
+</script>
+{% endblock %}
+</main>
+<br>

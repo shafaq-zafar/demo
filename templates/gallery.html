@@ -1,0 +1,317 @@
+{%include "header.html"%}
+<style>
+body {
+    font-size: 1rem;
+    font-family: 'Roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+  @media screen and (max-width: 600px) {
+    .rowww {
+      margin: 5px -8px !important; /* Add !important to ensure it takes precedence */
+    }
+
+    .column {
+      width: 100% !important; /* Add !important to ensure it takes precedence */
+      padding: 5px !important; /* Add !important to ensure it takes precedence */
+    }
+  }
+/* Center website */
+.main-card {
+  max-width: 1300px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.rowww {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.rowww,
+.rowww > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.rowww:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.contentt {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.progress {
+    width: 45%;
+    margin-left: 28%;
+}
+.column:hover .contentt {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Heading -->
+
+<div class="main-do bg-light p-5">
+  <div class="col-12 p-5">
+  <div class="eael-dual-header text-center">
+    <h2 class="title">
+      <span style="color: #007DC6;">HIRA DENTAL LAB</span>
+      <span style="color: #54595F;">GALLERY</span>
+    </h2>
+    <div class="eael-dch-separator-wrap">
+      <span class="separator-one"></span>
+      <span class="separator-two"></span>
+    </div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0"
+    aria-valuemax="50" style="height: 6px; background-color: #54595F;">
+    <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+</div>
+  </div>
+</div>
+<br>
+
+<!--  Gallery cards copy the cards if you want to add more -->
+<div class="main-card">
+<div class="rowww">
+  <div class="column nature">
+    <div class="contentt">
+      <img src="static/assets/images/duaa.png" alt="Mountains" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="contentt">
+    <img src="static/assets/images/2.png" alt="Lights" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="contentt">
+    <img src="static/assets/images/10.png" alt="Nature" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="contentt">
+      <img src="static/assets/images/9.jpeg" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="contentt">
+    <img src="static/assets/images/45.png" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="contentt">
+    <img src="static/assets/images/15.png" alt="Car" style="width:100%">
+    <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    -->
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="contentt">
+      <img src="static/assets/images/55.png" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+  <div class="column people">
+    <div class="contentt">
+    <img src="static/assets/images/20.png" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+  <div class="column people">
+    <div class="contentt">
+    <img src="static/assets/images/25.png" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+
+
+  <div class="column people">
+    <div class="contentt">
+      <img src="static/assets/images/35.png" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+  <div class="column people">
+    <div class="contentt">
+    <img src="static/assets/images/11.png" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+  <div class="column people">
+    <div class="contentt">
+    <img src="static/assets/images/gallery.jpg" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+
+
+
+  <div class="column people">
+    <div class="contentt">
+      <img src="static/assets/images/titaniumm.png" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+  <div class="column people">
+    <div class="contentt">
+    <img src="static/assets/images/crownn.png" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+  <div class="column people">
+    <div class="contentt">
+    <img src="static/assets/images/bridge.png" alt="Car" style="width:100%">
+      <!-- For image Description
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+      -->
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+<!-- END MAIN-CARD -->
+</div>
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+{%include "footerr.html"%}
+</html>

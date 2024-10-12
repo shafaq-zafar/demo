@@ -1,0 +1,423 @@
+{% extends "base.html" %}
+{% block content %}
+
+<title>Fully Guided Surgical Stent Manufacturer for Dentist</title>
+<style>
+    body {
+        font-size: 1rem;
+        font-family: 'Roboto', 'sans-serif';
+        margin: 0;
+        padding: 0;
+    }   
+/* horzontal line */
+.progress {
+    width: 45%;
+    margin-left: 28%;
+}
+.line{
+    width: 100%;
+    margin-right: 150%;
+}
+.card-title:hover {
+    color: #007DC6;
+    cursor: pointer;
+}
+.card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+    transition: box-shadow 0.3s ease;
+}
+    
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the values for the hover effect */
+}
+
+/* WhatsApp chat Widget styling */
+.whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .whatsapp-widget:hover {
+    background-color: #128C7E;
+  }
+  
+  .whatsapp-widget .whatsapp-icon {
+   display: block;
+   width: 40px;
+   height: 40px;
+  }
+  
+  /* Hide the widget initially */
+  .whatsapp-chat-box {
+   display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 80px;
+   background-color: #ffffff;
+   border: 1px solid #e1e1e1;
+   border-radius: 8px;
+   box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+   z-index: 998;
+  }
+  
+  .whatsapp-chat-box iframe {
+   width: 100%;
+   height: 100%;
+   border: 0;
+  }
+</style>
+
+
+<main>
+<!-- Whatsapp Chat Widget -->
+<div class="whatsapp-widget" id="whatsapp-widget">
+     <a href="https://wa.me/+442476263962" target="_blank" rel="noopener noreferrer">
+<div class="whatsapp-icon">
+        <svg>
+            <path d="M12.9821 10.1115C12.7029 10.7767 11.5862 11.442 10.7486 11.575C10.1902 11.7081 9.35269 11.8411 6.84003 10.7767C3.48981 9.44628 1.39593 6.25317 1.25634 6.12012C1.11674 5.85403 2.13001e-06 4.39053 2.13001e-06 2.92702C2.13001e-06 1.46351 0.83755 0.665231 1.11673 0.399139C1.39592 0.133046 1.8147 1.01506e-06 2.23348 1.01506e-06C2.37307 1.01506e-06 2.51267 1.01506e-06 2.65226 1.01506e-06C2.93144 1.01506e-06 3.21063 -2.02219e-06 3.35022 0.532183C3.62941 1.19741 4.32736 2.66092 4.32736 2.79397C4.46696 2.92702 4.46696 3.19311 4.32736 3.32616C4.18777 3.59225 4.18777 3.59224 3.90858 3.85834C3.76899 3.99138 3.6294 4.12443 3.48981 4.39052C3.35022 4.52357 3.21063 4.78966 3.35022 5.05576C3.48981 5.32185 4.18777 6.38622 5.16491 7.18449C6.42125 8.24886 7.39839 8.51496 7.81717 8.78105C8.09636 8.91409 8.37554 8.9141 8.65472 8.648C8.93391 8.38191 9.21309 7.98277 9.49228 7.58363C9.77146 7.31754 10.0507 7.1845 10.3298 7.31754C10.609 7.45059 12.2841 8.11582 12.5633 8.38191C12.8425 8.51496 13.1217 8.648 13.1217 8.78105C13.1217 8.78105 13.1217 9.44628 12.9821 10.1115Z" transform="translate(12.9597 12.9597)" fill="#FAFAFA"></path>
+    
+            <path d="M0.196998 23.295L0.131434 23.4862L0.323216 23.4223L5.52771 21.6875C7.4273 22.8471 9.47325 23.4274 11.6637 23.4274C18.134 23.4274 23.4274 18.134 23.4274 11.6637C23.4274 5.19344 18.134 -0.1 11.6637 -0.1C5.19344 -0.1 -0.1 5.19344 -0.1 11.6637C-0.1 13.9996 0.624492 16.3352 1.93021 18.2398L0.196998 23.295ZM5.87658 19.8847L5.84025 19.8665L5.80154 19.8788L2.78138 20.8398L3.73978 17.9646L3.75932 17.906L3.71562 17.8623L3.43104 17.5777C2.27704 15.8437 1.55796 13.8245 1.55796 11.6637C1.55796 6.03288 6.03288 1.55796 11.6637 1.55796C17.2945 1.55796 21.7695 6.03288 21.7695 11.6637C21.7695 17.2945 17.2945 21.7695 11.6637 21.7695C9.64222 21.7695 7.76778 21.1921 6.18227 20.039L6.17557 20.0342L6.16817 20.0305L5.87658 19.8847Z" transform="translate(7.7758 7.77582)" fill="white" stroke="white" stroke-width="0.2"></path>
+        </svg>
+</div>
+     </a>
+</div>
+    
+<script>
+    function openWhatsApp() {
+        // Replace YOUR_PHONE_NUMBER with your actual WhatsApp number
+         var phoneNumber = '+442476263962';  // Use the international format without spaces or special characters
+            
+        // Create a WhatsApp link
+        var whatsappLink = 'https://wa.me/+442476263962' + phoneNumber;
+            
+        // Open the link in a new tab or window
+        window.open(whatsappLink, '_blank');
+}
+</script>
+    
+<!-- Content Section -->
+<section class="elementor-section elementor-top-section elementor-element ...">
+    <!-- First Content Section -->
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="eael-dual-header text-center">
+                        <h1 class="title">
+                            <span style="color: #007DC6;"><strong>FULLY GUIDED </strong></span>
+                            <span style="color: #54595F;"><strong>SURGICAL STENT</strong></span>
+                        </h1>
+                        <div class="eael-dch-separator-wrap">
+                            <span class="separator-one"></span>
+                            <span class="separator-two"></span>
+                        </div>
+                    </div>
+                    <!-- horizontal line -->
+                    <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50" style="height: 6px; background-color: #54595F;">
+                        <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+</section>
+
+<section class="elementor-section elementor-top-section elementor-element ...">
+    <!-- Second Content Section -->
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="elementor-element elementor-element-3b44c026 elementor-widget elementor-widget-text-editor">
+                        <div class="elementor-widget-container">
+                            <div class="eael-dual-header">
+                                <h2 class="title">
+                                    <br>
+                                    <br>
+                                    <span style="color: #007DC6;"><strong>HIGHLY ACCURATE GUIDES FOR ALL PATIENT CASES</strong></span>
+                                    <span style="color: #54595F;"><strong>AND IMPLANT PROCEDURES</strong></span>
+                                </h2>
+                                <div class="eael-dch-separator-wrap">
+                                    <span class="separator-one"></span>
+                                    <span class="separator-two"></span>
+                                </div>
+    <!-- horizontal line -->
+                                <div class="line">
+                                <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50" style="height: 6px; background-color: #54595F;">
+                                    <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                            <p>All cases are different. Dentists can perform the implant placement procedure with fully guided surgical stent which is less invasive and least painful for the patient. So, your patients will get extra comfort with fully guided 3D printed surgical stents. Hira Dental Lab provides very precise guides that take into account the best suited angle, depth, and placement of the implant(s). Dentists can upload or email us the patient case file with CT scans/CBCT Scan, and our professionals will work and do analysis and plan their case and share with the dentist.</p>
+                            <ul>
+                                <li>We provide guided stents for every patient case</li>
+                                <li>Place implants at the best-suited positions, angle, and depth with precise guides</li>
+                                <li>Prepare your patient for restorative work in the best way possible</li>
+                                <li>UK’s leading dental laboratory offering the highest quality guided stents</li>
+                                <li>High-Quality surgical guided stents at affordable prices for every dentist’s need</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    <!-- image -->
+                <div class="col-md-6">
+                    <div class="elementor-element elementor-element-124c7253 elementor-widget elementor-widget-image">
+                        <div class="elementor-widget-container">
+                            <br>
+                            <br>
+
+                            <img fetchpriority="high" decoding="async" src="/static/assets/images/fully.png" class="attachment-large size-large wp-image-932" alt="Fully Guided Surgical Stent" srcset="https://www.hiradentallab.com/wp-content/uploads/2021/12/FULLY-GUIDED-SURGICAL-STENTS.jpg 850w, https://www.hiradentallab.com/wp-content/uploads/2021/12/FULLY-GUIDED-SURGICAL-STENTS-300x245.jpg 300w, https://www.hiradentallab.com/wp-content/uploads/2021/12/FULLY-GUIDED-SURGICAL-STENTS-768x626.jpg 768w" sizes="(max-width: 450px) 100vw, 500px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Repeat for other sections -->
+
+<!-- Last Content Section -->
+<section class="row">
+    <div class="col-md-12 text-center">
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6 text-center ">
+                    <img decoding="async" width="450" height="450" src="/static/assets/images/tooth and tissue.jpg" class="img-fluid " alt="" >
+                </div>
+                <div class="col-md-6">
+                    <div class="eael-dual-header">
+                        <h2 class="title"><span style="color: #007DC6;"><strong>Fully Guided Surgical Stent </strong> </span><span style="color: #54595F;"><strong>Manufacture for Dentists</strong></span></h2>
+                        <div class="eael-dch-separator-wrap">
+                            <span class="separator-one"></span>
+                            <span class="separator-two"></span>
+                        </div>
+                    </div>
+    
+                    <div class="elementor-element elementor-element-3b44c026 elementor-widget elementor-widget-text-editor">
+                        <div class="elementor-widget-container">
+                            <br>
+                            <br>
+                            <p>Hira Dental Lab is the most advanced fully guided surgical stent manufacturer for dentists in the UK. Our guides help dentists prepare their patient’s case for the most accurate implant placement. Once done, you would be able to load the implant with best possible angulation for crowns, bridges or locater prosthesis. So, partner with us and we will help you to plan your patient’s surgical guide in the best way possible. Our guided stents in the UK have been helping thousands of patients get their teeth to the ideal possible position. We are a professional dental laboratory offering dentists affordable guided surgical stent solutions for every possible scenario.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+    </div>
+</section>
+
+<section class="row">
+    <div class="col-md-12 text-center">
+        <div class="container">
+            <div class="card-deck">
+                <!-- card 1 -->
+                <div class="card" style="max-width: 35rem;">
+                    <div class="card-body">
+                        <!-- Add class to the card title for styling -->
+                        <h5 class="card-title hover-effect">Simple Guide</h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>Stent planning and preparation with Blue Sky Plan</li>
+                                <li>Suitable for fully guided surgery or pilot hole access alone</li>
+                                <li> CT scan is required in all cases</li>
+                                <li> Dentists can send digital intraoral scan or a model will be needed that will be scanned at the lab</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- card 2 -->
+                <div class="card" style="max-width: 35rem;">
+                    <div class="card-body">
+                        <!-- Add class to the card title for styling -->
+                        <h5 class="card-title hover-effect">Standard Guide</h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>Stent planning and preparation done with SMOP</li>
+                                <li>Complete osteotomy and implant placement can be finalized using the standard guide system</li>
+                                <li> Provides more accuracy and control compared with the simple guide system</li>
+                                <li> Reduced amount of coolant will access via the tube. So, the standard guide system is suited where more control and precision are needed</li>
+                                <li>Standard guide doesn’t work with every drill and surgical kits. Please ask us about the implant systems we can work with</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</section>
+
+
+<section class="row">
+    <div class="col-md-12 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="eael-dual-header-content-align-left">
+                        <div class="eael-dual-header">
+                            <h2 class="title"><span style="color: #007DC6;"><strong>PREPARE YOUR PATIENT’S RESTORATIVE WORK</strong></span><span style="color: #54595F;"><strong> WITH FULLY GUIDED SURGICAL STENTS
+                            </strong></span></h2>
+                            <div class="eael-dch-separator-wrap"><span class="separator-one"></span>
+                                <span class="separator-two"></span></div>
+                            <span class="subtext"></span>
+                            <span class="eael-dch-svg-icon"></span>
+                        </div>
+        
+                        <div class="elementor-element elementor-element-3c069e4 elementor-widget elementor-widget-text-editor">
+                            <p>Restorative work including prescribing and implant crowns, bridges or prosthesis is all about setting the basics right. Hira Dental Lab helps provide precise fully guided surgical stents for every patient case. We are the leading dental laboratory in the UK offering service for all dentists and clinics across the country. Start your patient’s journey to a fully operation aesthetically attractive restorative work in the best way possible. Send us your patient’s requirement and we will design and manufacture the best-fitting guides stents for your patient’s needs.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-6">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-08ddf89 elementor-widget elementor-widget-image">
+                            <img decoding="async" src="https://www.hiradentallab.com/wp-content/uploads/2022/04/Surgical-Stent.jpg" class="img-fluid" alt="Surgical Stent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--rest of paragraph 3 -->
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</section>
+
+<section class="row">
+    <div class="col-md-12 text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card mb-4" style="max-width: 35rem;">
+                        <div class="card-body">
+                            <h5 class="card-title hover-effect">Blue Sky</h5>
+                            <p class="card-text">
+                                This US developed planning treatment software has self-processing functionality that allows dentists to upload both CT scans and STL files. Dentists can complete the process from planning the implants to designing the guide itself.  
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card mb-4" style="max-width: 35rem;">
+                        <div class="card-body">
+                            <h5 class="card-title hover-effect">SMOP</h5>
+                            <p class="card-text">
+                                SMOP is one of the most intuitive planning software on the market. A precise 3D overview is available with wide range of added features and tools. Dentists can also access their account from multiple PCs or devices to share cases.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card mb-4" style="max-width: 35rem;">
+                        <div class="card-body">
+                            <h5 class="card-title hover-effect">ExoPlan</h5>
+                            <p class="card-text">
+                                A powerful implant planning and surgical guided stent design software offering dentists and implant specialists maximum flexibility. ExoPlan is based on the famous ExoCad platform and offers seamless digital workflow with high performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- rest of cards -->
+        <br>
+        <br>
+        <br>
+    </div>
+</section>
+
+
+
+<section class="row">
+    <div class="col-md-12 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="eael-dual-header-content-align-left">
+                        <div class="eael-dual-header">
+                            <h2 class="title"><span style="color: #007DC6;"><strong>GUIDED STENTS AT</strong></span><span style="color: #54595F;"><strong> MINIMAL COSTS FOR DENTISTS
+                            </strong></span></h2>
+                            <br>
+                            <div class="eael-dch-separator-wrap"><span class="separator-one"></span>
+                                <span class="separator-two"></span></div>
+                            <span class="subtext"></span>
+                            <span class="eael-dch-svg-icon"></span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-6">
+                    <div class="elementor-element elementor-element-21e6c35e elementor-widget elementor-widget-text-editor" data-id="21e6c35e" data-element_type="widget" data-widget_type="text-editor.default">
+                        <div class="elementor-widget-container">
+                            <p>Hira Dental Lab is a professional laboratory offering service for dentists from across the UK. We provide fully guided surgical stents for every patient that comes across your clinic. Our local high-quality manufacturing also ensures low-cost guides for implants in the UK.</p>
+                            <ul>
+                                <li>Guides starting from £75 only</li>
+                                <li>Guide print only service starting from £49 only</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- second last paragraph -->
+            <br>
+    <div class="col-md-6">
+        <div class="elementor-element elementor-element-27cc2e49 eael-dual-header-content-align-left elementor-widget elementor-widget-eael-dual-color-header" data-id="27cc2e49" data-element_type="widget" data-widget_type="eael-dual-color-header.default">
+            <div class="elementor-widget-container">
+                <div class="eael-dual-header">
+                    <h2 class="title"><span style="color: #007DC6;"><strong>WHAT WE NEED FROM</strong></span><span style="color: #54595F;"><strong> DENTISTS?
+                    </strong></span></h2>
+                    <div class="eael-dch-separator-wrap"><span class="separator-one"></span>
+                        <span class="separator-two"></span></div>
+                    <span class="subtext"></span>
+                    <span class="eael-dch-svg-icon"></span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="elementor-element elementor-element-78284ed elementor-widget elementor-widget-text-editor" data-id="78284ed" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                <br>
+                <ul>
+                    <li>Full CT scan or CBCT of patient’s teeth and bone condition</li>
+                    <li>Intraoral scans can be used for simple and standard guides</li>
+                    <li>Completed dental laboratory prescription form</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+<!-- Scripts and closing tags -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
+<main>

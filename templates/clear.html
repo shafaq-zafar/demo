@@ -1,0 +1,342 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <style>
+
+ body {
+    font-size: 1rem;
+    font-family: 'Roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+ }       
+/* horizontal line */
+ .progress {
+    width: 45%;
+    margin-left: 28%;
+}
+.line{
+    width: 100%;
+    margin-right: 100%;
+}
+.card-title:hover {
+    color: #007DC6;
+    cursor: pointer;
+}
+
+/* WhatsApp chat Widget styling */
+.whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+ 
+.whatsapp-widget:hover {
+    background-color: #128C7E;
+}
+ 
+.whatsapp-widget .whatsapp-icon {
+   display: block;
+   width: 40px;
+   height: 40px;
+}
+ 
+/* Hide the widget initially */
+.whatsapp-chat-box {
+   display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 80px;
+   background-color: #ffffff;
+   border: 1px solid #e1e1e1;
+   border-radius: 8px;
+   box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+   z-index: 998;
+}
+ 
+.whatsapp-chat-box iframe {
+   width: 100%;
+   height: 100%;
+   border: 0;
+}
+    </style>
+    <title>3D Printed Clear Aligners Lab UK , Digital Aligners For Straighten Teeth</title>
+</head>
+<body>
+
+    <!-- Whatsapp Chat Widget -->
+    <div class="whatsapp-widget" id="whatsapp-widget">
+        <a href="https://wa.me/+442476263962" target="_blank" rel="noopener noreferrer">
+            <div class="whatsapp-icon">
+                <svg>
+                    <path d="M12.9821 10.1115C12.7029 10.7767 11.5862 11.442 10.7486 11.575C10.1902 11.7081 9.35269 11.8411 6.84003 10.7767C3.48981 9.44628 1.39593 6.25317 1.25634 6.12012C1.11674 5.85403 2.13001e-06 4.39053 2.13001e-06 2.92702C2.13001e-06 1.46351 0.83755 0.665231 1.11673 0.399139C1.39592 0.133046 1.8147 1.01506e-06 2.23348 1.01506e-06C2.37307 1.01506e-06 2.51267 1.01506e-06 2.65226 1.01506e-06C2.93144 1.01506e-06 3.21063 -2.02219e-06 3.35022 0.532183C3.62941 1.19741 4.32736 2.66092 4.32736 2.79397C4.46696 2.92702 4.46696 3.19311 4.32736 3.32616C4.18777 3.59225 4.18777 3.59224 3.90858 3.85834C3.76899 3.99138 3.6294 4.12443 3.48981 4.39052C3.35022 4.52357 3.21063 4.78966 3.35022 5.05576C3.48981 5.32185 4.18777 6.38622 5.16491 7.18449C6.42125 8.24886 7.39839 8.51496 7.81717 8.78105C8.09636 8.91409 8.37554 8.9141 8.65472 8.648C8.93391 8.38191 9.21309 7.98277 9.49228 7.58363C9.77146 7.31754 10.0507 7.1845 10.3298 7.31754C10.609 7.45059 12.2841 8.11582 12.5633 8.38191C12.8425 8.51496 13.1217 8.648 13.1217 8.78105C13.1217 8.78105 13.1217 9.44628 12.9821 10.1115Z" transform="translate(12.9597 12.9597)" fill="#FAFAFA"></path>
+    
+                    <path d="M0.196998 23.295L0.131434 23.4862L0.323216 23.4223L5.52771 21.6875C7.4273 22.8471 9.47325 23.4274 11.6637 23.4274C18.134 23.4274 23.4274 18.134 23.4274 11.6637C23.4274 5.19344 18.134 -0.1 11.6637 -0.1C5.19344 -0.1 -0.1 5.19344 -0.1 11.6637C-0.1 13.9996 0.624492 16.3352 1.93021 18.2398L0.196998 23.295ZM5.87658 19.8847L5.84025 19.8665L5.80154 19.8788L2.78138 20.8398L3.73978 17.9646L3.75932 17.906L3.71562 17.8623L3.43104 17.5777C2.27704 15.8437 1.55796 13.8245 1.55796 11.6637C1.55796 6.03288 6.03288 1.55796 11.6637 1.55796C17.2945 1.55796 21.7695 6.03288 21.7695 11.6637C21.7695 17.2945 17.2945 21.7695 11.6637 21.7695C9.64222 21.7695 7.76778 21.1921 6.18227 20.039L6.17557 20.0342L6.16817 20.0305L5.87658 19.8847Z" transform="translate(7.7758 7.77582)" fill="white" stroke="white" stroke-width="0.2"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
+    
+    <script>
+        function openWhatsApp() {
+            // Replace YOUR_PHONE_NUMBER with your actual WhatsApp number
+            var phoneNumber = '+442476263962';  // Use the international format without spaces or special characters
+            
+            // Create a WhatsApp link
+            var whatsappLink = 'https://wa.me/+442476263962' + phoneNumber;
+            
+            // Open the link in a new tab or window
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+
+
+<section class="elementor-section elementor-top-section elementor-element ...">
+    <!-- First Content Section -->
+    <div class="container">
+        
+            <div class="row">
+                <div class="col-12">
+                    <div class="eael-dual-header text-center">
+                        <h1 class="title">
+                            <span style="color: #007DC6;"><strong>CLEAR  </strong></span>
+                            <span style="color: #54595F;"><strong>ALIGNERS</strong></span>
+                        </h1>
+                        <div class="eael-dch-separator-wrap">
+                            <span class="separator-one"></span>
+                            <span class="separator-two"></span>
+                        </div>
+                    </div>
+                    <!-- horizontal line -->
+                    <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50" style="height: 6px; background-color: #54595F;">
+                        <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+                    </div>
+                </div>
+          
+        </div>   
+        <!-- heading and horizontal lines-->
+        <!-- paragraph -->
+       
+    </div>
+</section>
+
+<section class="elementor-section elementor-top-section elementor-element ...">
+    <!-- Second Content Section -->
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="elementor-element elementor-element-3b44c026 elementor-widget elementor-widget-text-editor">
+                        <div class="elementor-widget-container">
+                            <div class="eael-dual-header">
+                                <h2 class="title">
+                                    <br>
+                                    <br>
+                                    <span style="color: #007DC6;"><strong>ALL-DAY ALIGNERS FOR DENTISTS TO</strong></span>
+                                    <span style="color: #54595F;"><strong>MAKE THEIR PATIENTS SMILE MORE</strong></span>
+                                </h2>
+                                <div class="eael-dch-separator-wrap">
+                                    <span class="separator-one"></span>
+                                    <span class="separator-two"></span>
+                                </div>
+    <!-- horizontal line -->
+                                <div class="line">
+                                <div class="progress" role="progressbar" aria-label="Example 2px high" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50" style="height: 6px; background-color: #54595F;">
+                                    <div class="progress-bar" style="width: 50%; background-color: #007DC6;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                            <p>If your patient needs all-day aligners to straighten out their teeth, you have come to the right place. Hira Dental Lab provides digital aligners that are based on your patient’s accurate requirement. Our custom solutions enable dentists across the country to make their patients smile better. We provide clear aligners for:</p>
+                            <ul>
+                                <li>Crowded Teeth – Overlapping teeth or teeth that are too close</li>
+                                <li>Overbites – When your patient’s upper front teeth overlap with the lower front teeth</li>
+                                <li>Underbites – If your patient has lower front teeth overlapping with upper front teeth</li>
+                                <li>Diastema – When your patient has small or large gaps between teeth</li>
+                                <li>Open Bites – The rare cases where your patient’s upper and lower teeth slant outward without touching fully when the mouth is closed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    <!-- image -->
+                <div class="col-md-6">
+                    <div class="elementor-element elementor-element-124c7253 elementor-widget elementor-widget-image">
+                        <div class="elementor-widget-container">
+                            <br>
+                            <br>
+
+                            <img fetchpriority="high" decoding="async" src="/static/assets/images/clear-aligners.jpeg" class="attachment-large size-large wp-image-932" alt="pic" width="450" style="margin-top: 30px;" sizes="(max-width: 450px) 100vw, 450px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+</section>
+
+<!-- Repeat for other sections -->
+
+<!-- Last Content Section -->
+<section class="row">
+    <div class="col-md-12 text-center">
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6 text-center ">
+                    <img fetchpriority="high" decoding="async" src="/static/assets/images/smile.png" class="attachment-large size-large wp-image-932" alt="pic" width="400" style="margin-top: 30px;" sizes="(max-width: 400px) 100vw, 400px">
+                </div>
+                <div class="col-md-6">
+                    <div class="eael-dual-header">
+                        <h2 class="title"><span style="color: #007DC6;"><strong>CLEAR ALIGNERS TO HELP REGAIN YOUR</strong> </span><span style="color: #54595F;"><strong>PATIENT’S SMILE CONFIDENCE</strong></span></h2>
+                        <div class="eael-dch-separator-wrap">
+                            <span class="separator-one"></span>
+                            <span class="separator-two"></span>
+                        </div>
+                    </div>
+                
+                    <div class="container-fluid">
+                        <!-- First Section -->
+                        <section class="row elementor-section elementor-top-section elementor-element-56ffa9d elementor-hidden-tablet elementor-hidden-phone elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+                            <div class="col-md-12">
+                                <p>Hira Dental Lab provides dentists in UK some of the best clear aligners. Our high-tech digital dental lab is able to manufacture very comfortable and accurate clear aligners that bring your patient’s smile confidence back. We work with digital impressions in shape of intraoral scans and produce high-quality clear aligners for your patient’s accurate requirement. Our advanced equipment including 3D modeling and printing produces some of the most accurate aligners for all teeth. So, help your patients improve their smile confidence with industry leading clear aligners in the UK. We are a trusted dental lab in UK offering best products and services for all dentists anywhere in the country.</p>
+                            </div>
+                        </section>
+    </div>
+</section>
+
+<section class="row">
+    <div class="col-md-12 text-center">
+        <div class="container-fluid">
+            <!-- Fourth Section -->
+            <section class="row elementor-section elementor-top-section elementor-element-56ffa9d elementor-hidden-tablet elementor-hidden-phone elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+                <div class="col-md-12">
+                    
+            </section>
+        </div>
+    </div>
+<!--rest of 2 paragraph -->
+<!-- paragraph 3 -->
+<section class="elementor-section elementor-top-section elementor-element elementor-element-7672d624 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="elementor-element elementor-element-3b44c026 elementor-widget elementor-widget-text-editor">
+                <div class="elementor-widget-container">
+                    <div class="eael-dual-header">
+                        <h2 class="title">
+                            <br>
+                            <br>
+                            <span style="color: #007DC6;"><strong>DIGITAL 3D PRINTED CLEAR ALIGNERS TO</strong></span>
+                            <span style="color: #54595F;"><strong>MAKE YOUR PATIENTS HAPPY</strong></span>
+                        </h2>
+                        <div class="eael-dch-separator-wrap">
+                            <span class="separator-one"></span>
+                            <span class="separator-two"></span>
+                        </div>
+                </div>
+                <br>
+                <br>
+                <p>Hira Dental Lab is a trusted service provider in the UK. Our advanced dental laboratory is able to work on digital teeth and smile scans and produce very accurate 3D printed clear aligners. Dentists can send us digital scan files and our advanced 3D modeling and printing will do the rest. You will get perfectly accurate clear aligners for your patient’s matching requirement.<br>1)Send us your patient’s digital scanned impression or the intraoral scans<br>2) Our advanced systems convert the file into digital 3D models of your patient’s teeth<br>3) 3D printed accurate clear aligners are produced for your patient’s requirement<br>4) UK’s leading digital dental laboratory offering service for all dentists</p>
+            </div>
+            </div>
+        </div>
+<!-- image -->
+        <div class="col-md-6">
+            <div class="elementor-element elementor-element-124c7253 elementor-widget elementor-widget-image">
+                <div class="elementor-widget-container">
+                    <br>
+                    <br>
+                    <img fetchpriority="high" decoding="async" src="/static/assets/images/heart.png" class="attachment-large size-large wp-image-932" alt="pic" width="450" style="margin-top: 30px;" sizes="(max-width: 450px) 100vw, 450px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+    </div>
+</section>
+
+
+
+<section class="row">
+    <div class="col-md-12 text-center">
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6 text-center ">
+                    <img fetchpriority="high" decoding="async" src="/static/assets/images/scan.png" wp-image-932" alt="pic" width="500" style="margin-top: 30px;" sizes="(max-width: 500px) 100vw, 500px">
+                </div>
+                <div class="col-md-6">
+                    <div class="eael-dual-header">
+                    
+                        <div class="eael-dch-separator-wrap">
+                            <span class="separator-one"></span>
+                            <span class="separator-two"></span>
+                        </div>
+                    </div>
+                <br>
+                <br>
+                <br>
+                    <div class="container-fluid">
+                        <section class="row elementor-section elementor-top-section elementor-element-56ffa9d elementor-hidden-tablet elementor-hidden-phone elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+                            <div class="col-md-12">
+                            <h2 class="title"><span style="color: #007DC6;"><strong>COMFORTABLE NATURAL-LOOKING</strong> </span><span style="color: #54595F;"><strong>CLEAR ALIGNERS FOR ALL YOUR PATIENTS</strong></span></h2>
+                            <div class="eael-dch-separator-wrap">
+                                <span class="separator-one"></span>
+                                <span class="separator-two"></span>
+                                <br>
+                                <p>Traditional wired aligners are uncomfortable to wear and look very unorthodox. Hira Dental Lab now provides high-quality clear aligners for your patient’s requirement that are barely noticeable. We provide clear aligners for children, young students and all aged adults as well. Our clear aligners are formed from a thin layer of transparent material that isn’t even noticeable most of the times. Your patients will be able to do their everyday tasks just as usual while our aligners straighten out their teeth invisibly. Our advanced dental laboratory in UK is able to provide 100% matching clear aligners for every case. So, send us your patient’s requirement today and we will provide clear aligners in quickest time with our in-house digital 3D scanning, modeling and printing.</p>
+                            </div>
+                            
+                                    </div>
+                                </footer>
+                                </main>
+                
+                        </body>
+                        </html>
+                        </section>
+                    </div>
+                    </div>
+                    <div>
+                    <div>
+                    </div> 
+                    </div> 
+                </div> 
+                <!-- 4 paragraph -->
+                <!-- last -->
+                <section class="row">
+                    <div class="col-md-12 text-center">
+                        <br>
+                        <br>
+                        <br>
+                        <h2 span style="color: #007DC6;"><strong>HIGH-QUALITY MATERIALS FOR</strong></span>
+                            <span style="color: #54595F;"><strong>PERFECT CLEAR ALIGNERS IN UK</strong></span>
+                    
+                    
+                        <div class="eael-dch-separator-wrap">
+                            <span class="separator-one"></span>
+                            <span class="separator-two"></span>
+                            <br>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-12">
+                        <p class="text-center">At Hira Dental Lab, we use latest most advanced materials for our clear aligners. Our materials are formulated scientifically to provide quicker, more comfortable and accurate treatment for your patients. In-house manufactured clear aligners from our dental laboratory in UK provide 50% faster results with massively accurate more teeth straightening. We use medical-grade material that consists of thermoplastic. Multilayer aromatic thermoplastic polyurethane/copolyester is used to make our clear aligners industry leading in fit and finish. Our aligners are very moldable and make sure to provide your patients unique confident smiles. Get in touch today and we will provide dentists with some of the best clear aligners in UK.</p>
+                    </div>
+                </section>
+        
+    </div>
+</section>
+<!-- Scripts and closing tags -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
+</body>
+</html>

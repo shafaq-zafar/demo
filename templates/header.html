@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="icon" href="/static/assets/images/hira-logo-1.png" type="image/x-icon">
+  <link rel="shortcut icon" href="/static/assets/images/hira-logo-1.png" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+  <style>
+
+    
+    .border {
+		border-radius:20px;
+		width:30%;
+		background:#e9ffff;
+	} 
+
+  hr {
+    border: none;
+    height: 3px;
+    background-color: #dee2e6; /* Set your desired color for the line */
+    box-shadow: 5 10px 20px rgba(0, 0, 0, 0.5); /* Adjust the shadow values as needed */
+    margin: 20px 0; /* Adjust the margin as needed */
+  }
+    .navbar-nav .nav-item:hover .nav-link {
+    color: #046E89 !important;
+   }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+			      border-radius:5px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 7px 16px;
+            text-decoration: none;
+            color: black;
+			
+        }
+		
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+		
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+.product {
+    color: #1ab1e5;
+    font-size: 18px;
+    text-decoration: none !important;
+    margin-top: -2%;
+    display: inline-block; /* Ensures inline-block behavior */
+    
+}
+         .product:hover {
+			 color:#046E89;
+		 }
+
+		.product {
+			margin-left:-1%;
+			
+		}
+    @media (max-width: 767px) {
+      .navbar-nav .nav-item {
+        background-color: #yourDesiredBackgroundColor; /* Change this to your desired background color */
+      }
+  
+      .navbar-nav .nav-item .nav-link {
+        color: #fff !important; /* Change this to your desired color */
+        font-weight: bold !important;
+      }
+    }
+    @media (max-width: 958px) {
+      .custom-hidden {
+        display: none !important;
+      }
+    }
+    @media (max-width: 767px) {
+      .navbar-collapse {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -250px; /* Initial position off-screen */
+        width: 250px; /* Set the width of the off-canvas menu */
+        transition: all 0.3s;
+        z-index: 1000;
+      }
+  
+      .navbar-collapse.show {
+        left: 0; /* Show the menu by moving it to the left */
+      }
+  
+      .offcanvas {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+        z-index: 999;
+      }
+  
+      .offcanvas.show {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    @media (max-width: 1198px) {
+      .navbar-nav .nav-link {
+        padding: 8px; /* Adjust the padding for smaller screens */
+        white-space: nowrap; /* Prevent text from wrapping */
+      }
+    }
+  
+    @media (max-width: 985px) {
+      .navbar-nav .nav-link {
+        padding: 8px; /* Adjust the padding for smaller screens */
+        white-space: nowrap; /* Prevent text from wrapping */
+      }
+    }
+
+
+/* Styling for card of general enquiries */
+.card-containerr {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Start off-screen on the right */
+  width: 300px;
+  height: 15vh;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-out; /* Change transition property to right */
+  padding: 20px;
+  z-index: 1000; /* Set a higher z-index value to make sure it appears above other elements */
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 767px) {
+  .card-containerr {
+    color: #fff; /* Text color for small screens */
+    background-color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+  
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .jin {
+    color: #fff !important; 
+   
+  }
+}
+ 
+  .roww {
+      display: flex;
+      align-items: center;
+  }
+  
+ .fa-envelope {
+      margin-right: 10px;
+  }
+
+  .iconn-container {
+    display: flex;
+    align-items: center;
+}
+
+
+  </style>
+</head>
+<body>
+
+<!-- Section 1 -->
+<div class="container mt-4 d-md-none d-md-block">
+  <div class="row">
+    <div class="col-md-2">
+      <a href="home">
+        <img src="/static/assets/images/hira-logo-1.png" class="img-fluid" alt="Logo">
+      </a>
+    </div>
+    <div class="col-md-9 text-right d-none d-sm-block custom-hidden" style="margin-top: 2%">
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <i class="fas fa-envelope" style="color:#1ab1e5"></i>
+          <a href="mailto:info@hiradentallab.com" style="text-decoration:none; color:#222;">info@hiradentallab.com</a>
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-phone-alt" style="color:#1ab1e5"></i> +44 24 7626 3962
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<hr>
+<!-- Section 2 -->
+<section class="py-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="home" style="color:#1ab1e5; padding: 14px; font-weight: bold;">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus" style="color:#1ab1e5; padding: 14px; font-weight: bold;">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Specialize" style="color:#1ab1e5; padding: 14px; font-weight: bold;">WE SPECIALIZE IN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Digital" style="color:#1ab1e5; padding: 14px; font-weight: bold;">DIGITAL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Contactus" style="color:#1ab1e5; padding: 14px; font-weight: bold;">CONTACT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Accreditations" style="color:#1ab1e5; padding: 14px; font-weight: bold;">ACCREDITATIONS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery" style="color:#1ab1e5; padding: 14px; font-weight: bold;">GALLERY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Download" style="color:#1ab1e5; padding: 14px; font-weight: bold;">DOWNLOADS</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+<!-- Background color for the navbar -->
+<div id="offCanvas" class="offcanvas">
+  <!-- Close button (times) -->
+  <button type="button" class="btn btn-outline-light btn-lg close-button">&times;</button>
+
+  <!-- Content of the off-canvas menu -->
+  <div class="offcanvas-content">
+
+  </div>
+</div>
+
+<script>
+  // Custom JavaScript to toggle the off-canvas menu
+  document.addEventListener("DOMContentLoaded", function () {
+    var navbarToggler = document.querySelector(".navbar-toggler");
+    var offCanvas = document.getElementById("offCanvas");
+
+    navbarToggler.addEventListener("click", function () {
+      offCanvas.classList.toggle("show");
+    });
+
+    offCanvas.addEventListener("click", function () {
+      offCanvas.classList.remove("show");
+    });
+  });
+</script>
+
+
+
+
+ <!-- For General Enquiries card -->
+    <!-- Your card container -->
+    <div id="card-containerr" class="card-containerr">
+      <div class="roww">
+        <div class="iconn-container">
+          <i class="fas fa-question-circle" style="margin-right: 5px; margin-bottom: 13%; color: #1ab1e5"></i>
+          <p>For Intraoral/CBCT Scans please use :</p>
+      </div>
+      </div>
+      <li class="list-inline-item">
+        <i class="fas fa-envelope" style="color:#1ab1e5"></i>
+        <a href="mailto:godigital@hiradentallab.com" class="jin" style="text-decoration:none; color:#222;">godigital@hiradentallab.com</a>
+      </li>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the card container
+      var cardContainerr = document.getElementById('card-containerr');
+  
+      // Function to show the card
+      function showCard() {
+          cardContainerr.style.right = '0'; // Change to right property
+      }
+  
+      // Function to hide the card
+      function hideCard() {
+          cardContainerr.style.right = '-300px'; // Change to right property
+      }
+  
+      // Show the card after a delay (adjust as needed)
+      setTimeout(showCard, 1000);
+  
+      // Hide the card when clicking outside of it
+      document.addEventListener('click', function (event) {
+          if (!cardContainerr.contains(event.target)) {
+              hideCard();
+          }
+      });
+  
+      // Optional: You can add more events or triggers to show/hide the card
+  });
+  </script>
+
+
+  
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+        
+</body>
+</html>
